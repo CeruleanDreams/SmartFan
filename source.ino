@@ -24,9 +24,9 @@ void setup()
 void loop() {
   // put your main code here, to run repeatedly:
   
-  sensorValue = analogRead(A0); //tmp 36 reads resistance
-  float voltage = sensorValue * 3000;  
-  voltage /= 1024.0; 
+  sensorValue = analogRead(A0); //tmp 35 reads voltage
+  float voltage = sensorValue; // * 3000;  
+  voltage /= 10; //1024.0; 
   float temp = voltage; // ^ Formula used to transform input voltage into temperature in Celsius
   
  // float temp = (voltage - 0.5) * 40 ; // Used to be (x100), but the STM32 seems to be operating at a higher voltage compared to the Arduino UNO
